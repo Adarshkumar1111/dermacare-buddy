@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { Progress } from '@/components/ui/progress';
@@ -375,34 +376,46 @@ const SkinInsights = () => {
                 What's Next?
               </h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div className="p-5 rounded-xl border-2 border-border card-hover bg-gradient-to-br from-primary/5 to-transparent">
+                <Link
+                  to="/skin-insights/products"
+                  className="p-5 rounded-xl border-2 border-border card-hover bg-gradient-to-br from-primary/5 to-transparent transition-all"
+                >
                   <div className="text-3xl mb-3">💊</div>
                   <h4 className="font-semibold mb-2">Recommended Products</h4>
                   <p className="text-sm text-muted-foreground">
                     Doctor-approved products for your skin type
                   </p>
-                </div>
-                <div className="p-5 rounded-xl border-2 border-border card-hover bg-gradient-to-br from-accent/5 to-transparent">
+                </Link>
+                <Link
+                  to="/skin-insights/diet-plan"
+                  className="p-5 rounded-xl border-2 border-border card-hover bg-gradient-to-br from-accent/5 to-transparent transition-all"
+                >
                   <div className="text-3xl mb-3">🥗</div>
                   <h4 className="font-semibold mb-2">Diet Plan</h4>
                   <p className="text-sm text-muted-foreground">
                     Nutrition tips for healthy, glowing skin
                   </p>
-                </div>
-                <div className="p-5 rounded-xl border-2 border-border card-hover bg-gradient-to-br from-success/5 to-transparent">
+                </Link>
+                <Link
+                  to="/skin-insights/precautions"
+                  className="p-5 rounded-xl border-2 border-border card-hover bg-gradient-to-br from-success/5 to-transparent transition-all"
+                >
                   <div className="text-3xl mb-3">⚠️</div>
                   <h4 className="font-semibold mb-2">Precautions</h4>
                   <p className="text-sm text-muted-foreground">
                     Essential care tips for your skin
                   </p>
-                </div>
-                <div className="p-5 rounded-xl border-2 border-border card-hover bg-gradient-to-br from-primary/5 to-transparent">
+                </Link>
+                <Link
+                  to="/skin-insights/diseases"
+                  className="p-5 rounded-xl border-2 border-border card-hover bg-gradient-to-br from-primary/5 to-transparent transition-all"
+                >
                   <div className="text-3xl mb-3">🏥</div>
                   <h4 className="font-semibold mb-2">Common Conditions</h4>
                   <p className="text-sm text-muted-foreground">
                     Learn about skin conditions & treatments
                   </p>
-                </div>
+                </Link>
               </div>
             </Card>
           </div>
